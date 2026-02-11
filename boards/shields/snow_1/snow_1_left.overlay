@@ -16,5 +16,6 @@
         , <&pro_micro 3 GPIO_ACTIVE_HIGH>  // Col 3 (c4): P020 (P0.20)
         , <&pro_micro 14 GPIO_ACTIVE_HIGH>  // Col 4 (c5): P111 (P1.11)
         , <&pro_micro 5 GPIO_ACTIVE_HIGH>  // Col 5 (c6): P024 (P0.24)
+        , <&pro_micro 6 GPIO_ACTIVE_HIGH>  // Col 6 (c7): P100 (P1.00)
         ;
 };
