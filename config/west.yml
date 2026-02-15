@@ -5,10 +5,11 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: harryzmk
-      url-base: https://github.com/harrygao56/zmk
+      url-base: https://github.com/harrygao56
   projects:
     - name: zmk
       remote: harryzmk
+      revision: main
       import: app/west.yml
   self:
     path: config
