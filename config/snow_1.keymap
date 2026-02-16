@@ -49,7 +49,7 @@
 
 // --------------------------------------------------      --------------------------------------------------
 // |  `  | BRI- | BRI+ |      |      |      |      |       | PREV | PLAY | NEXT | MUTE | VOL- |    VOL+    |
-// |       |      | RCLK | MCLK | MB4  | MB5  |             |      | SLOW | MED  | FAST | INS  |    PGUP    |
+// |       |      |      |      | RCLK | MCLK |             |      | SLOW | MED  | FAST | INS  |    PGUP    |
 // |        | MS_L | MS_D | MS_U | MS_R | BSPC |             | LEFT | DOWN |  UP  | RGHT | PGDN |    END    |
 // |          | SC_L | SC_D | SC_U | SC_R |      |             |      |      |      |      | DEL  |         |
 // |     |      |      |      |      |  LCLK   |             | LCLK  | BACK | FWD  |      |               |
@@ -59,10 +59,10 @@
             display-name = "FN1";
             bindings = <
     &kp GRAVE      &kp C_BRI_DN   &kp C_BRI_UP  &none          &none          &none          &none          /**/ &kp C_PREV     &kp C_PP       &kp C_NEXT     &kp C_MUTE     &kp C_VOL_DN   &kp C_VOL_UP
-    &none          &none          &mkp RCLK      &mkp MCLK      &mkp MB4       &mkp MB5                      /**/ &none          &mms SPEED_SLOW &mms SPEED_MEDIUM &mms SPEED_FAST &kp INS     &kp PG_UP
+    &none          &none          &none          &none          &mkp RCLK      &mkp MCLK                     /**/ &none          &mms SPEED_SLOW &mms SPEED_MEDIUM &mms SPEED_FAST &kp INS     &kp PG_UP
     &trans         &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP   &mmv MOVE_RIGHT &kp BSPC                     /**/ &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp PG_DN      &kp END
     &trans         &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP   &msc SCRL_RIGHT &trans                       /**/ &none          &none          &none          &none          &kp DEL        &trans
-    &trans         &trans         &trans         &trans          &trans          &mkp LCLK                     /**/ &mkp LCLK      &kp C_AC_BACK  &kp C_AC_FORWARD &trans       &trans
+    &trans         &trans         &trans         &trans          &trans          &mkp LCLK                     /**/ &mkp LCLK      &kp K_BACK     &kp K_FORWARD  &trans       &trans
             >;
         };
 
