@@ -21,5 +21,7 @@
 include:
   - board: nice_nano/nrf52840/zmk
     shield: snow_1_left
+    artifact-name: snow_1_left-nice_nano_v2
   - board: nice_nano/nrf52840/zmk
     shield: snow_1_right
+    artifact-name: snow_1_right-nice_nano_v2
