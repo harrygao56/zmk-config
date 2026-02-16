@@ -15,7 +15,7 @@
 #define ZMK_POINTING_SPEED_FAST_MUL 4
 #define ZMK_POINTING_SPEED_FAST_DIV 1
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1300  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
 #include <dt-bindings/zmk/pointing.h>
@@ -31,7 +31,7 @@
 // ----------------------------------------------      ----------------------------------------------
 // | ESC |  1  |  2  |  3  |  4  |  5  |  6  |         |  7  |  8  |  9  |  0  |  -  |     =     |
 // | TAB   |  Q  |  W  |  E  |  R  |  T  |              |  Y  |  U  |  I  |  O  |  P  |   BSPC    |
-// | CAPS   |  A  |  S  |  D  |  F  |  G  |              |  H  |  J  |  K  |  L  |  '  |   ENTER  |
+// | CT/ESC |  A  |  S  |  D  |  F  |  G  |              |  H  |  J  |  K  |  L  |  '  |   ENTER  |
 // | SHIFT    |  Z  |  X  |  C  |  V  |  B  |              |  N  |  M  |  ,  |  .  |  /  |    ;    |
 // | L1  |  L2  | LCTL | LALT | LGUI|   SPC   |            |  SPC  |  [  |  ]  |   \  |    L1     |
 // ----------------------------------------------      ----------------------------------------------
@@ -41,7 +41,7 @@
             bindings = <
     &kp ESC   &kp N1    &kp N2   &kp N3    &kp N4    &kp N5    &kp N6    /**/ &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS  &kp EQUAL
     &kp TAB   &kp Q     &kp W    &kp E     &kp R     &kp T               /**/ &kp Y     &kp U     &kp I     &kp O     &kp P      &kp BSPC
-    &kp CAPS  &kp A     &kp S    &kp D     &kp F     &kp G               /**/ &kp H     &kp J     &kp K     &kp L     &kp SQT    &kp ENTER
+    &mt LCTRL ESC &kp A &kp S    &kp D     &kp F     &kp G               /**/ &kp H     &kp J     &kp K     &kp L     &kp SQT    &kp ENTER
     &kp LSHFT &kp Z     &kp X    &kp C     &kp V     &kp B               /**/ &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH   &kp SEMI
     &mo 1     &mo 2     &kp LCTRL &kp LALT  &kp LGUI  &kp SPACE           /**/ &kp SPACE &kp LBKT  &kp RBKT  &kp BSLH  &mo 1
             >;
@@ -52,7 +52,7 @@
 // |       |      | RCLK | MCLK | MB4  | MB5  |             |      | SLOW | MED  | FAST | INS  |    PGUP    |
 // |        | MS_L | MS_D | MS_U | MS_R | BSPC |             | LEFT | DOWN |  UP  | RGHT | PGDN |    END    |
 // |          | SC_L | SC_D | SC_U | SC_R |      |             |      |      |      |      | DEL  |         |
-// |     |      |      |      |      |  LCLK   |             | RCLK  |      |      |      |               |
+// |     |      |      |      |      |  LCLK   |             | LCLK  | BACK | FWD  |      |               |
 // --------------------------------------------------      --------------------------------------------------
 
         fn1_layer {
@@ -62,7 +62,7 @@
     &none          &none          &mkp RCLK      &mkp MCLK      &mkp MB4       &mkp MB5                      /**/ &none          &mms SPEED_SLOW &mms SPEED_MEDIUM &mms SPEED_FAST &kp INS     &kp PG_UP
     &trans         &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP   &mmv MOVE_RIGHT &kp BSPC                     /**/ &kp LEFT       &kp DOWN       &kp UP         &kp RIGHT      &kp PG_DN      &kp END
     &trans         &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP   &msc SCRL_RIGHT &trans                       /**/ &none          &none          &none          &none          &kp DEL        &trans
-    &trans         &trans         &trans         &trans          &trans          &mkp LCLK                     /**/ &mkp RCLK      &trans         &trans         &trans         &trans
+    &trans         &trans         &trans         &trans          &trans          &mkp LCLK                     /**/ &mkp LCLK      &kp C_AC_BACK  &kp C_AC_FORWARD &trans       &trans
             >;
         };
 
